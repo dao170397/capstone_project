@@ -25,9 +25,9 @@ class CapstoneTestCase(unittest.TestCase):
         "title":"Endless Love",
         "releaseDate":"01/24/2022"
         }
-        self.token_casting_assistant='Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpWeFk1ekJsNDdGazYtbFpVemtXSiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kbHRlcTBiMzR5eGJsbmRvLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2Njc0NzU0NWUzNzYzNGVjMjFkMTA4YzkiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTcxOTUwMDM0NiwiZXhwIjoxNzE5NTA3NTQ2LCJzY29wZSI6IiIsImF6cCI6ImRMVDJSajc5RkhlcDNkNWRzamkzOTN6eHFVM0RLRHpYIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.hw1yngmHBOTq_2mSg-RY-Ic-urDUTMJMU-xKGXNp-rP2Xk832lXmzqNR1D-dwBIVi20hzTfd9OCGjxNCMqbX_xoG_4OKcfAyKyG7_MX-JbpENUdME9Ox_ayuXPrVku4w3TfG_JbyveO8cU1Wr3AtBnxswTzq65hYWroEnAjZhvN9H9H9G-XxUlaJtKEN3FQrx2yL-iRUNZSkjeOYOezAIuezVN7qhSMrVXWPmt-X2iYM_I8sFWDALxKIFWEkQP-hVH6C1wWQ4xjCkCh9HXlpWfzkModTwV5bnFZGUtHWk0tWj-nFtxFEURikwbsrt7QMKduw8p6l4TY6Fqp810f-Mg'
-        self.token_casting_director='Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpWeFk1ekJsNDdGazYtbFpVemtXSiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kbHRlcTBiMzR5eGJsbmRvLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2Njc0NzVhMmI5NDQ2YTM3YjVmNDAzODciLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTcxOTUwMDQ2NSwiZXhwIjoxNzE5NTA3NjY1LCJzY29wZSI6IiIsImF6cCI6ImRMVDJSajc5RkhlcDNkNWRzamkzOTN6eHFVM0RLRHpYIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9yIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRoOmFjdG9ycyIsInBhdGg6bW92aWUiLCJwb3N0OmFjdG9yIl19.ckhkSvXG6J25uiYrckZ2FxWvI83YVE-m1GzexBPNGwCBOVNaG6Z2titGgpDPOz2EDHPwzlslxOTjFnLi_qDH9luWn73Yk4cJatK1V6k1TFucKlI6vSg-q0u29PixMjM5Oy7jJ6UmY4RbcMbajELh7Cem0X5jHgVoFKTd7JZ9tqrkntxw5DAXgbfpLEkhHAMgb3bvLhV-3Rr52o5weLbnUONWX7ittApdpGvQOAwai0gLBaTpKxMqNWRmfFYEMbB7mXmMj_xz0ynzPtL3XyVHVt87LnnrdrtS92qjVujl7zqGkEnNls6jec1dUWmHzzY9JHjZdaIMezH-FwvUTL3Q7g'
-        self.token_executive_producer='Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpWeFk1ekJsNDdGazYtbFpVemtXSiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kbHRlcTBiMzR5eGJsbmRvLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2Njc0NzVmMmUzNzYzNGVjMjFkMTA5YTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTcxOTYyOTcxNSwiZXhwIjoxNzE5NjM2OTE1LCJzY29wZSI6IiIsImF6cCI6ImRMVDJSajc5RkhlcDNkNWRzamkzOTN6eHFVM0RLRHpYIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9yIiwiZGVsZXRlOm1vdmllIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRoOmFjdG9ycyIsInBhdGg6bW92aWUiLCJwb3N0OmFjdG9yIiwicG9zdDptb3ZpZSJdfQ.giN_T3na02dwUeZvMcK-1wOF3YygRzzqzefSH9wkMvXQnOs2mK00CYzOAuGgGEXhbiwrMxSnjvtgay6ky2qwwQw-gUky3LfTHtIBC52bvpvxpudB8EDMMlKX__kZyy5wYJc4CwR9SFb_OMMGC4EnpYG_fYWru_5rd0rbaZc3Ro1u01Uv8TK6iBM4HxA34EHW-22I5UTOhPaNC1aXsRxJVpbzA0J8E7sIFHWPd_OG4sXrbLWmwjYN1K5oi9tK2bLLW3yEzp8BYb5s_of1fWAwWPX7sKuZRNB4EaVdu5D4NVsdMg7HO7BrM2tmC6xJvoCIoIVM9QRDQ-AUgEc5ZBZPIw'
+        self.token_casting_assistant=os.environ['ASSISTANT']
+        self.token_casting_director=os.environ['DIRECTOR']
+        self.token_executive_producer=os.environ['PRODUCER']
         # binds the app to the current context
         with self.app.app_context():
             db.create_all()
@@ -160,7 +160,7 @@ class CapstoneTestCase(unittest.TestCase):
             "age":"62",
             "gender":"M"
         }
-        res = self.client().patch("/actor/1", json=new_actor, headers=header_obj)
+        res = self.client().patch("/actors/1", json=new_actor, headers=header_obj)
         data = res.get_json()
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data["success"], True)
@@ -173,7 +173,7 @@ class CapstoneTestCase(unittest.TestCase):
         "title":'New Movie',
         "releaseDate":"01/9/2022"
         }
-        res = self.client().patch("/movie/1", json=new_movie,headers=header_obj)
+        res = self.client().patch("/movies/1", json=new_movie,headers=header_obj)
         data = res.get_json()
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data["success"], True)

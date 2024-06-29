@@ -20,28 +20,35 @@ def setup_db(app, database_path=database_path):
     with app.app_context():
         db.create_all()
 
-class Movie(db.Model):
+class inheritedClassName(db.Model):
+    __abstract__ = True
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+
+
+class Movie(inheritedClassName):
+    id:int
+    title:String
+    releaseDate:DateTime
     __tablename__ = 'movies'
 
     id = Column(Integer, primary_key=True)
-    title = Column(String)
+    title = Column(String,nullable=False)
     releaseDate = Column(DateTime)
     actors = db.relationship('Actor', backref="movie", lazy=True)
 
     def __init__(self, title, releaseDate):
         self.title = title
         self.releaseDate = releaseDate
-
-    def insert(self):
-        db.session.add(self)
-        db.session.commit()
-
-    def update(self):
-        db.session.commit()
-
-    def delete(self):
-        db.session.delete(self)
-        db.session.commit()
 
     def format(self):
         return {
@@ -51,11 +58,15 @@ class Movie(db.Model):
             'actors':[actor.format() for actor in self.actors]
             }
 
-class Actor(db.Model):
+class Actor(inheritedClassName):
+    id:int
+    name:String
+    age:int
+    gender:String
     __tablename__ = 'actors'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String,nullable=False)
     age = Column(Integer)
     gender=Column(String)
     movie_id = Column(Integer, ForeignKey('movies.id'), nullable=True)
@@ -67,16 +78,6 @@ class Actor(db.Model):
         self.gender = gender
         self.movie_id = movie_id
 
-    def insert(self):
-        db.session.add(self)
-        db.session.commit()
-
-    def update(self):
-        db.session.commit()
-
-    def delete(self):
-        db.session.delete(self)
-        db.session.commit()
 
     def format(self):
         return {
