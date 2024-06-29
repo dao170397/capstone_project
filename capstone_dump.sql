@@ -5,7 +5,7 @@
 -- Dumped from database version 16.2
 -- Dumped by pg_dump version 16.2
 
--- Started on 2024-06-29 09:23:23
+-- Started on 2024-06-29 19:21:35
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -29,7 +29,7 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public.actors (
     id integer NOT NULL,
-    name character varying,
+    name character varying NOT NULL,
     age integer,
     gender character varying,
     movie_id integer
@@ -82,7 +82,7 @@ ALTER TABLE public.alembic_version OWNER TO postgres;
 
 CREATE TABLE public.movies (
     id integer NOT NULL,
-    title character varying,
+    title character varying NOT NULL,
     "releaseDate" timestamp without time zone
 );
 
@@ -137,30 +137,7 @@ ALTER TABLE ONLY public.movies ALTER COLUMN id SET DEFAULT nextval('public.movie
 --
 
 
-
---
--- TOC entry 4853 (class 0 OID 24682)
--- Dependencies: 219
--- Data for Name: alembic_version; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- TOC entry 4850 (class 0 OID 24660)
--- Dependencies: 216
--- Data for Name: movies; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- TOC entry 4861 (class 0 OID 0)
--- Dependencies: 217
--- Name: actors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.actors_id_seq', 1, false);
+SELECT pg_catalog.setval('public.actors_id_seq', 6, true);
 
 
 --
@@ -169,7 +146,7 @@ SELECT pg_catalog.setval('public.actors_id_seq', 1, false);
 -- Name: movies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.movies_id_seq', 1, false);
+SELECT pg_catalog.setval('public.movies_id_seq', 2, true);
 
 
 --
@@ -208,7 +185,7 @@ ALTER TABLE ONLY public.actors
     ADD CONSTRAINT actors_movie_id_fkey FOREIGN KEY (movie_id) REFERENCES public.movies(id);
 
 
--- Completed on 2024-06-29 09:23:23
+-- Completed on 2024-06-29 19:21:35
 
 --
 -- PostgreSQL database dump complete
