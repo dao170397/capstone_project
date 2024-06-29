@@ -4,10 +4,6 @@ Casting Agency Project
 # Motivation for the project
 The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. You are an Executive Producer within the company and are creating a system to simplify and streamline your process.
 
-# Installing Dependencies
-```bash
-    pip install -r requirements.txt
-```
 # Database Setup
 ```bash
     create database capstone;
@@ -17,6 +13,16 @@ The Casting Agency models a company that is responsible for creating movies and 
 ```bash
     create database capstone_test;
     psql -U postgres -d capstone_test -f capstone_dump.sql
+```
+# Create a virtual environment
+```bash
+    python -m venv myvenv
+    myvenv\Scripts\activate
+```
+
+# Installing Dependencies
+```bash
+    pip install -r requirements.txt
 ```
 # Run project on local
     ```bash
